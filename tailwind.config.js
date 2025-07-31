@@ -1,14 +1,22 @@
-// tailwind.config.js
-const {heroui} = require("@heroui/theme");
+import { heroui } from "heroui/theme";
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const config = {
   content: [
-    "./node_modules/@heroui/theme/dist/components/(avatar|badge|button|card|code|divider|dropdown|input|kbd|link|listbox|modal|navbar|progress|snippet|spinner|toggle|table|toast|ripple|menu|popover|form|checkbox|spacer).js"
-],
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["var(--font-sans)"],
+        mono: ["var(--font-mono)"],
+      },
+    },
   },
   darkMode: "class",
   plugins: [heroui()],
 };
+
+module.exports = config;
