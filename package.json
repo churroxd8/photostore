@@ -13,7 +13,7 @@
     "db:migrate": "tsx ./lib/db/migrate.ts"
   },
   "dependencies": {
-    "@clerk/nextjs": "^6.28.1",
+    "@clerk/nextjs": "^6.29.0",
     "@heroui/avatar": "^2.2.20",
     "@heroui/badge": "^2.2.15",
     "@heroui/button": "^2.2.24",
@@ -28,6 +28,7 @@
     "@heroui/modal": "^2.2.21",
     "@heroui/navbar": "^2.2.22",
     "@heroui/progress": "^2.2.20",
+    "@heroui/react": "^2.8.2",
     "@heroui/snippet": "^2.2.25",
     "@heroui/spinner": "^2.2.21",
     "@heroui/switch": "^2.2.22",
@@ -84,7 +85,7 @@
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
     "tailwind-variants": "^2.1.0",
-    "tailwindcss": "^4",
+    "tailwindcss": "^4.1.11",
     "tsx": "^4.20.3",
     "typescript": "^5"
   }
