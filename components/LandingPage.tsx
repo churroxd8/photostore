@@ -209,7 +209,7 @@ const LandingPage = () => {
                   <div className="flex items-center space-x-1 mb-4">
                     <span className="text-yellow-400">⭐⭐⭐⭐⭐</span>
                   </div>
-                  <p className="text-gray-700 mb-4 italic">"{testimonial.content}"</p>
+                  <p className="text-gray-700 mb-4 italic">&quot;{testimonial.content}&quot;</p>
                   <div className="flex items-center space-x-3">
                     <Avatar 
                       name={testimonial.avatar}
@@ -240,7 +240,7 @@ const LandingPage = () => {
               className="bg-white text-blue-600 font-semibold px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
               endContent={<span>→</span>}
             >
-              Let's Go
+              Let&apos;s Go
             </Button>
           </Link>
         </div>
