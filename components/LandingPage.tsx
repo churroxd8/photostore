@@ -4,13 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { Button, Card, CardBody, Chip, Avatar } from '@heroui/react';
 import Link from 'next/link';
 
-/* const LandingPage = () => {
-  const [isHydrated, setIsHydrated] = useState(false);
-
-  useEffect(() => {
-    setIsHydrated(true);
-  }, []); */
-
 const LandingPage = () => {
   const features = [
     {
