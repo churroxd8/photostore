@@ -1,7 +1,15 @@
 "use client";
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Card, CardBody, Chip, Avatar } from '@heroui/react';
+import Link from 'next/link';
+
+/* const LandingPage = () => {
+  const [isHydrated, setIsHydrated] = useState(false);
+
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []); */
 
 const LandingPage = () => {
   const features = [
@@ -56,15 +64,19 @@ const LandingPage = () => {
             </span>
           </div>
           <div className="flex items-center space-x-4">
-            <Button variant="light" className="text-gray-600 hover:text-gray-900">
-              Sign In
-            </Button>
-            <Button 
-              color="primary" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              Sign Up
-            </Button>
+            <Link href="/sign-in">
+              <Button variant="light" className="text-gray-600 hover:text-gray-900">
+                Sign In
+              </Button>
+            </Link>
+            <Link href="/sign-up">
+              <Button 
+                color="primary" 
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Sign Up
+              </Button>
+            </Link>
           </div>
         </div>
       </header>
@@ -96,18 +108,20 @@ const LandingPage = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg"
-                color="primary"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-                endContent={<span>→</span>}
-              >
-                Get Started Free
-              </Button>
+              <Link href="/sign-up">
+                <Button 
+                  size="lg"
+                  color="primary"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                  endContent={<span>→</span>}
+                >
+                  Get Started Free
+                </Button>
+              </Link>
               <Button 
                 size="lg"
                 variant="bordered"
-                className="border-2 border-gray-300 text-gray-700 font-semibold px-8 py-6 text-lg hover:border-gray-400 transition-colors"
+                className="border-2 border-gray-300 text-gray-700 font-semibold px-8 py-6 text-lg hover:border-gray-400 transition-colors w-full sm:w-auto"
               >
                 Watch Demo
               </Button>
@@ -227,13 +241,15 @@ const LandingPage = () => {
           <p className="text-xl mb-8 text-blue-100">
             Join thousands of users who trust PhotoStore with their memories.
           </p>
-          <Button 
-            size="lg"
-            className="bg-white text-blue-600 font-semibold px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-            endContent={<span>→</span>}
-          >
-            Let's Go
-          </Button>
+          <Link href="/sign-up">
+            <Button 
+              size="lg"
+              className="bg-white text-blue-600 font-semibold px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              endContent={<span>→</span>}
+            >
+              Let's Go
+            </Button>
+          </Link>
         </div>
       </section>
 
